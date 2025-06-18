@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name - Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/your-photo.jpg" alt="Your photo" class="profile-img">
+    <h1>Your Name</h1>
+    <p>Electronics and Communication Engineer | PCB Designer | Web Developer</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a fresher with a degree in Electronics and Communication. Trained in Altium Designer and Embedded Systems. I’ve completed internships in PCB Design and Web Development.</p>
+    <a href="Your_Resume.pdf" download class="resume-button">Download Resume</a>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Altium Designer</li>
+      <li>Embedded Systems</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>SQL, MySQL</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <img src="images/project1.jpg" alt="Smart Water Monitoring" />
+      <h3>Smart Water Monitoring System</h3>
+      <p>Used pH, turbidity, and temperature sensors to monitor water quality wirelessly.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="images/project2.jpg" alt="PCB Design" />
+      <h3>Custom PCB Design</h3>
+      <p>Designed and simulated PCBs using Altium Designer for embedded control circuits.</p>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+
+  <button id="mode-toggle">🌙 Dark Mode</button>
+  <script>
+    const toggle = document.getElementById('mode-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
+</body>
+</html>
